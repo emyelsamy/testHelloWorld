@@ -1,15 +1,14 @@
-name: hello World
+name: helloWorld
 on: [push, workflow_dispatch]
 jobs: 
-  runs-helloWorld:
+  run-helloWorld:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "21"
-      - name: run and compile java
+      - name: runCompile
         run: javac helloWorld.java && java helloWorld
-  
-
+      
